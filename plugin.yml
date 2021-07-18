@@ -1,0 +1,13 @@
+name: Spell Check
+description: Annotates the build with found spelling errors
+author: https://github.com/jradtilbrook
+requirements:
+  - docker
+configuration:
+  properties:
+    pattern:
+      type: string
+  required:
+    - pattern
+  additionalProperties: false
+
