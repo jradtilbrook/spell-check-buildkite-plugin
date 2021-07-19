@@ -10,5 +10,5 @@ steps:
 
   - command: Check spelling
     plugins:
-      - jradtilbrook/spell-check#1.0.0:
+      - jradtilbrook/spell-check:
           pattern: '*.txt'
