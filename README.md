@@ -12,7 +12,7 @@ Add the following to you `pipeline.yml`:
 steps:
   - command: ls
     plugins:
-      - jradtilbrook/spell-check#1.0.0:
+      - jradtilbrook/spell-check#v1.0.0:
           pattern: ‘*.md’
 ```
 
