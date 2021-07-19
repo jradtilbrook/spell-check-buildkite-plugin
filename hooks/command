@@ -5,4 +5,8 @@ CHECK_NAME="$BUILDKITE_PLUGIN_SPELL_CHECK_PATTERN"
 
 SPELLING_ERRORS=$(docker run -v $(pwd):/spell -e CHECK_DIR=/spell -e CHECK_NAME johnroesler/docker-spell-check)
 
-buildkite-agent annotate "The following errors have been found in these files: ${SPELLING_ERRORS}"
+if [[ -z "${SPELLING_ERRORS}" ]]; then
+    buildkite-agent annotate --style 'success' "No spelling errors found"
+else
+    buildkite-agent annotate --style 'warning' "The following errors have been found in these files: ${SPELLING_ERRORS}"
+fi
