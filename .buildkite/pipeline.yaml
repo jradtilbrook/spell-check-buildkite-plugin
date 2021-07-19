@@ -4,8 +4,15 @@ steps:
       plugin-linter#v2.0.0:
         id: jradtilbrook/spell-check
 
+  - label: ":sparkles:"
+    plugins:
+      docker-compose#v3.7.0:
+        run: lint
+
   - label: ":docker: :hammer:"
-    command: docker-compose run tests
+    plugins:
+      docker-compose#v3.7.0:
+        run: tests
 
   - label: Check spelling
     command: ls
