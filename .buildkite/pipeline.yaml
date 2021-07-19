@@ -1,8 +1,8 @@
 steps:
   - label: ":sparkles:"
     plugins:
-      plugin-linter#v2.0.0:
-        id: jradtilbrook/spell-check
+      docker-compose#v3.7.0:
+        run: lint
     soft_fail: true
 
   - label: ":docker: :hammer:"
@@ -12,5 +12,5 @@ steps:
 
   - command: ls
     plugins:
-      - jradtilbrook/spellcheck#1.0.0:
+      - jradtilbrook/spell-check#1.0.0:
           pattern: ‘*.md’
