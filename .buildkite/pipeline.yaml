@@ -4,11 +4,6 @@ steps:
       plugin-linter#v2.0.0:
         id: jradtilbrook/spell-check
 
-  - label: ":sparkles:"
-    plugins:
-      docker-compose#v3.7.0:
-        run: lint
-
   - label: ":docker: :hammer:"
     plugins:
       docker-compose#v3.7.0:
