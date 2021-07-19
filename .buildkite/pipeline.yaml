@@ -1,12 +1,11 @@
 steps:
-  # - label: ":sparkles:"
-  #   plugins:
-  #     docker-compose#v3.7.0:
-  #       run: lint
-  #   soft_fail: true
+  - label: ":sparkles:"
+    plugins:
+      plugin-linter#v2.0.0:
+        id: jradtilbrook/spell-check
 
-  # - label: ":docker: :hammer:"
-  #   command: docker-compose run tests
+  - label: ":docker: :hammer:"
+    command: docker-compose run tests
 
   - label: Check spelling
     command: ls
