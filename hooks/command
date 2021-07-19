@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-CHECK_NAME="$BUILDKITE_PLUGIN_SPELL_CHECK_PATTERN"
+export CHECK_NAME="$BUILDKITE_PLUGIN_SPELL_CHECK_PATTERN"
 
 SPELLING_ERRORS=$(docker run -v $(pwd):/spell -e CHECK_DIR=/spell -e CHECK_NAME johnroesler/docker-spell-check | tr '\n' ',')
 
