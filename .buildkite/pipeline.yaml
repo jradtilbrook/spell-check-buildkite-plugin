@@ -1,12 +1,12 @@
 steps:
-  - label: ":sparkles:"
-    plugins:
-      docker-compose#v3.7.0:
-        run: lint
-    soft_fail: true
+  # - label: ":sparkles:"
+  #   plugins:
+  #     docker-compose#v3.7.0:
+  #       run: lint
+  #   soft_fail: true
 
-  - label: ":docker: :hammer:"
-    command: docker-compose run tests
+  # - label: ":docker: :hammer:"
+  #   command: docker-compose run tests
 
   - command: Check spelling
     plugins:
