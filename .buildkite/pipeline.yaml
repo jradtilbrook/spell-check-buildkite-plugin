@@ -8,7 +8,8 @@ steps:
   # - label: ":docker: :hammer:"
   #   command: docker-compose run tests
 
-  - command: Check spelling
+  - label: Check spelling
+    command: ls
     plugins:
       - jradtilbrook/spell-check:
-          pattern: 'errors.md'
+          pattern: '*.md'
