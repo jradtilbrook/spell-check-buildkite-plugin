@@ -6,11 +6,9 @@ steps:
     soft_fail: true
 
   - label: ":docker: :hammer:"
-    plugins:
-      docker-compose#v3.7.0:
-        run: tests
+    command: docker-compose run tests
 
-  - command: ls
+  - command: Check spelling
     plugins:
       - jradtilbrook/spell-check#1.0.0:
           pattern: ‘*.md’
