@@ -11,4 +11,4 @@ steps:
   - command: Check spelling
     plugins:
       - jradtilbrook/spell-check:
-          pattern: '*.txt'
+          pattern: 'errors.md'
