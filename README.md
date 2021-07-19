@@ -29,3 +29,7 @@ To run the tests:
 ```shell
 docker-compose run --rm tests
 ```
+
+## Attribution
+
+Thanks to [starefossen/aspell](starefossen/aspell) for use of the docker image to perform spell checking.
