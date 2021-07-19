@@ -3,7 +3,7 @@ set -euo pipefail
 
 CHECK_NAME="$BUILDKITE_PLUGIN_SPELL_CHECK_PATTERN"
 
-SPELLING_ERRORS=$(docker run -v $(pwd):/spell -e CHECK_DIR=/spell -e CHECK_NAME johnroesler/docker-spell-check)
+SPELLING_ERRORS=$(docker run -v $(pwd):/spell -e CHECK_DIR=/spell -e CHECK_NAME johnroesler/docker-spell-check | tr '\n' ',')
 
 if [[ -z "${SPELLING_ERRORS}" ]]; then
     buildkite-agent annotate --style 'success' "No spelling errors found"

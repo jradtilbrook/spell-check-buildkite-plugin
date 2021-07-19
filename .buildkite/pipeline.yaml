@@ -11,4 +11,4 @@ steps:
   - command: Check spelling
     plugins:
       - jradtilbrook/spell-check#1.0.0:
-          pattern: ‘*.md’
+          pattern: errors.md
