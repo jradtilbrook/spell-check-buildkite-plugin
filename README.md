@@ -1,4 +1,4 @@
-# Spell Check Buildkite Plugin
+# Spell Check Buildkite Plugin test
 
 This is a plugin to check spelling of input files.
 
